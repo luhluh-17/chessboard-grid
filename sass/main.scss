@@ -25,7 +25,6 @@ body {
   @include block-color($block-light, $block-dark);
 }
 
-.cell {
-  width: 60px;
-  height: 60px;
-}
+@include block-size($cell-default);
+
+@include media-query;
