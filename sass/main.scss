@@ -1,13 +1,25 @@
-@use './' as *;
+@use "./" as *;
 
 @include resetter;
 
 body {
   background: $page-color;
-  height: 100vh;
+}
+
+main {
   display: grid;
+  height: 100vh;
+  grid-gap: 0;
+  grid-template-rows: 40px auto;
   justify-content: center;
   align-items: center;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Raleway", sans-serif;
 }
 
 .grid-container {
