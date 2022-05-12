@@ -1,11 +1,11 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #212121;
+  background: #312e2b;
   height: 100vh;
   display: grid;
   justify-content: center;
@@ -14,12 +14,37 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(8, 60px);
-  grid-template-rows: repeat(8, 60px);
-  background: white;
+  background: #eec99d;
+  border: 1rem solid #84380f;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.55), 0 10px 10px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-.grid-container > :nth-child(even) {
-  background: black;
+
+.row-1 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+.row-1 > :nth-child(even) {
+  background: #c06937;
+}
+.row-1 > :nth-child(odd) {
+  background: #eec99d;
+}
+
+.row-2 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+.row-2 > :nth-child(even) {
+  background: #eec99d;
+}
+.row-2 > :nth-child(odd) {
+  background: #c06937;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,11 +1,9 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@use './' as *;
+
+@include resetter;
 
 body {
-  background: #212121;
+  background: $page-color;
   height: 100vh;
   display: grid;
   justify-content: center;
@@ -14,11 +12,20 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(8, 60px);
-  grid-template-rows: repeat(8, 60px);
-  background: white;
+  background: $block-light;
+  border: 1rem solid $chess-border;
+  @include custom-shadow;
+}
 
-  & > :nth-child(even){
-    background: black;
-  }
+.row-1 {
+  @include block-color($block-dark, $block-light);
+}
+
+.row-2 {
+  @include block-color($block-light, $block-dark);
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
 }
