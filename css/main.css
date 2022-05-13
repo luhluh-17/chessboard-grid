@@ -6,22 +6,10 @@
 
 body {
   background: #312e2b;
-}
-
-main {
   display: grid;
-  height: 100vh;
-  grid-gap: 0;
-  grid-template-rows: 40px auto;
-  justify-content: center;
   align-items: center;
-}
-
-.title {
-  color: white;
-  text-align: center;
-  margin-top: 1rem;
-  font-family: "Raleway", sans-serif;
+  justify-content: center;
+  height: 100vh;
 }
 
 .grid-container {
@@ -66,15 +54,5 @@ main {
     width: 40px;
   }
 }
-/* Tablet */
-@media (min-width: 501px) and (max-width: 768px) {
-  .cell {
-    height: 60px;
-    width: 60px;
-  }
-}
-/* Normal */
-/* Widescreen */
-/* Landscape */
 
 /*# sourceMappingURL=main.css.map */
