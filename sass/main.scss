@@ -27,4 +27,6 @@ body {
 
 @include block-size($cell-default);
 
+@include my-animation($cell-default);
+
 @include media-query;
