@@ -75,6 +75,10 @@ body {
   animation: x 0.1s linear 7s 1 forwards;
 }
 
+#king-black-1 {
+  animation: check 0.1s linear 7s 1 forwards;
+}
+
 @keyframes e4 {
   from {
     transform: translate(0, 0);
@@ -137,6 +141,12 @@ body {
     transform: translate(-120px, 360px);
   }
 }
+@keyframes check {
+  to {
+    height: 60px;
+    background: #f6685e;
+  }
+}
 /* Smartphones */
 @media only screen and (max-width: 500px) {
   .cell {
@@ -170,6 +180,10 @@ body {
 
   #pawn-black-6 {
     animation: x 0.1s linear 7s 1 forwards;
+  }
+
+  #king-black-1 {
+    animation: check 0.1s linear 7s 1 forwards;
   }
 
   @keyframes e4 {
@@ -232,6 +246,12 @@ body {
     }
     100% {
       transform: translate(-80px, 240px);
+    }
+  }
+  @keyframes check {
+    to {
+      height: 40px;
+      background: #f6685e;
     }
   }
 }
