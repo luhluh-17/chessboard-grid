@@ -19,27 +19,21 @@ body {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.55), 0 10px 10px rgba(0, 0, 0, 0.5);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-
-.row-1 {
+.grid-container > div {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
 }
-.row-1 > :nth-child(even) {
-  background: #c06937;
-}
-.row-1 > :nth-child(odd) {
+.grid-container > div:nth-child(odd) > :nth-child(odd) {
   background: #eec99d;
 }
-
-.row-2 {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-}
-.row-2 > :nth-child(even) {
-  background: #eec99d;
-}
-.row-2 > :nth-child(odd) {
+.grid-container > div:nth-child(odd) > :nth-child(even) {
   background: #c06937;
+}
+.grid-container > div:nth-child(even) > :nth-child(odd) {
+  background: #c06937;
+}
+.grid-container > div:nth-child(even) > :nth-child(even) {
+  background: #eec99d;
 }
 
 .cell {

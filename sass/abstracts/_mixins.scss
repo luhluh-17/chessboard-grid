@@ -1,3 +1,5 @@
+@use "colors" as *;
+
 @mixin block-color($light, $dark) {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
@@ -7,5 +9,25 @@
 
   & > :nth-child(odd) {
     background: $dark;
+  }
+}
+
+@mixin block-color($child) {
+  @if $child == odd {
+    &:nth-child(#{$child}) {
+      @include child-color(odd, $block-light);
+      @include child-color(even, $block-dark);
+    }
+  } @else {
+    &:nth-child(#{$child}) {
+      @include child-color(odd, $block-dark);
+      @include child-color(even, $block-light);
+    }
+  }
+}
+
+@mixin child-color($child, $color) {
+  > :nth-child(#{$child}) {
+    background: $color;
   }
 }
